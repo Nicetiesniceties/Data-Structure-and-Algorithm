@@ -1,0 +1,42 @@
+Team_Id: 24
+Topic: <<2k18: Programmer's Pocket Edition>>
+Description:
+	Following the record-breaking launch of NBA 2K17, the NBA 2K franchise continues 
+	to stake its claim as the most authentic sports video game with NBA 2K18. As the 
+	franchise that “all sports video games should aspire to be” (, said GamesRadar), 
+	NBA 2K18 will take the game to new heights and continue to blur the lines between 
+	video game and reality. Having read  the feedback and response from many of you, 
+	we are going to release a groundbreaking new version of 2K series this year. Here 
+	goes our <<2k18: Programmer's Pocket Edition>>!
+
+	To play our new edition, you will be given an NBA player with his "Player Name" 
+	and some statistics about him, which will be depicted later. Your goal is to decide
+	what action should this player take judging from the given statistics, which is 
+	to shoot(, and decide it to be a 3 pointer or 2 pointer), to drive in, or to pass!   
+	The input file will contain the following:
+		"Player Name," which can simply be written in a string type.
+		"Three Pointer Percentage," the ratio of 3-pointers made to 3-pointers attempted. 
+		"Two Pointer Percentage," the ratio of 2-pointers made to 2-pointers attempted.
+		"Drive-In Percentage," the ratio of successful Driving-In to attempted Driving-In.
+			(Successful driving-in always worth two points, and for sake of efficiency, 
+		 	 we don't consider the situations that the player is fouled.)
+		"Assist Percentage," the ratio of assists to attempted passes.
+			We suggest you should read all the percentages above in double type!!!
+		"N", which is an integer indicating there's N following lines in the input file.
+			(also the number of times for you to decide moves.)
+		The following N lines contains a "0," "1," or "2," while 
+		"2" indicates that your player is not in a good shooting position with his 
+			"Three Pointer Percentage" lowered by 20%  and "Two Pointer Percentage"lowered 
+			by 10%.
+		"1" indicates that your player is being guarded with his "Three Pointer Percentage", "Two Pointer Percentage,"
+			lowered by 10%, and "Drive-In Percentage" lowered  by 20%.
+		"0" indicates your player is not being guarded with his original statistics.
+		At last, for each line which contains a "0" or "1," you have to output a move.
+		For shooting a 2-pointers, you should output a "2"
+		For shooting a 3-pointers, you should output a "3"
+		For driving-in, you should output an "D"
+		For passing the ball, you should output a "P"
+	At the end, your performance will be evaluated with a special index, "Contribution Index,"
+	while "Contribution Index" =  (tree pointers you made) * 3 + (two pointers you made) * 2+ (assists you made) * 2.5, 
+	and to pass our testcase, you should at least have a Contribution Index bigger than N * 2.7
+	(N is the original "N" from our input file).
